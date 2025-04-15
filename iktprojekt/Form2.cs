@@ -25,9 +25,16 @@ namespace iktprojekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1 f1 = new Form1();
-            f1.Show();
-            this.Hide();
+            if (textBox1.Text == "asd" && textBox2.Text == "asd")
+            {
+                new Form1().Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("a beirt név vagy jelszo hibás!");
+            }
+            
 
         }
 

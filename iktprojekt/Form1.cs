@@ -22,11 +22,14 @@ namespace iktprojekt
             button1.FlatStyle = FlatStyle.Flat;
             button1.BackColor = Color.LightSteelBlue;
             button1.FlatAppearance.BorderSize = 0;
+            listBox1.DrawMode = DrawMode.OwnerDrawFixed;
+            listBox1.DrawItem += listBox1_DrawItem;
 
             label1.Hide();
             label2.Hide();
             label3.Hide();
             label4.Hide();
+            label5.Hide();
             button1.Hide();
             button2.Hide();
             button3.Hide();
@@ -36,6 +39,7 @@ namespace iktprojekt
             comboBox1.Hide();
             comboBox2.Hide();
             dateTimePicker1.Hide();
+            
 
 
             comboBox1.Items.Add("Munka");
@@ -97,6 +101,7 @@ namespace iktprojekt
             label2.Show();
             label3.Show();
             label4.Show();
+            label5.Show();
             button1.Show();
             button2.Show();
             button3.Show();
@@ -273,8 +278,49 @@ namespace iktprojekt
                 }
             }
         }
+        private void listBox1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
 
+            string itemText = listBox1.Items[e.Index].ToString();
+            DateTime hatarido;
 
+            Color szin = Color.Black;
+
+            try
+            {
+                string[] reszek = itemText.Split(new[] { "  |  " }, StringSplitOptions.None);
+                if (reszek.Length == 3)
+                {
+                    hatarido = DateTime.Parse(reszek[2]);
+
+                    if (hatarido.Date > DateTime.Now.Date)
+                        szin = Color.Green;
+                    else if (hatarido.Date == DateTime.Now.Date)
+                        szin = Color.Orange;
+                    else
+                        szin = Color.Red;
+                }
+            }
+            catch
+            {
+                szin = Color.Black;
+            }
+
+            e.DrawBackground();
+
+            using (Brush brush = new SolidBrush(szin))
+            {
+                e.Graphics.DrawString(itemText, e.Font, brush, e.Bounds);
+            }
+
+            e.DrawFocusRectangle();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
