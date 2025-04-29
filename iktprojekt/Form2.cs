@@ -15,7 +15,7 @@ namespace iktprojekt
         public Form2()
         {
             InitializeComponent();
-            textBox2.UseSystemPasswordChar = false;
+            textBox2.UseSystemPasswordChar = true;
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -58,6 +58,12 @@ namespace iktprojekt
         private void Form2_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Form3().Show();
         }
     }
 }
