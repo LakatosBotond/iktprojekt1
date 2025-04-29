@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace iktprojekt
 {
     public partial class Form2 : Form
     {
+        string connString = "server=localhost;port=3306;database=ovs;user=root;password=";
+
         public Form2()
         {
             InitializeComponent();
@@ -25,14 +29,53 @@ namespace iktprojekt
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "asd" && textBox2.Text == "asd")
+            string username = textBox1.Text.Trim();
+            string password = textBox2.Text.Trim();
+
+            if (username == "" || password == "")
             {
-                new Form1().Show();
-                this.Hide();
+                MessageBox.Show("nevet és jelszót kötelezö megadni!");
+                return;
             }
             else
             {
-                MessageBox.Show("a beirt név vagy jelszo hibás!");
+                try
+                {
+                    MySqlConnection conn = new MySqlConnection(connString);
+                    using (conn)
+                    {
+                        conn.Open();
+                        string query = "SELECT username, password FROM users WHERE username=@uname AND password=@password LIMIT 1";
+                        MySqlDataAdapter ada = new MySqlDataAdapter(query, conn);
+                        ada.SelectCommand.Parameters.AddWithValue("@uname", username);
+                        ada.SelectCommand.Parameters.AddWithValue("@password", password);
+
+                        DataTable table = new DataTable();
+                        ada.Fill(table);
+                        
+                        if (table.Rows.Count > 0)
+                        {
+                            MessageBox.Show("Sikeres bejelentkezés");
+                            conn.Close();
+                            new Form1().Show();
+                            this.Hide();
+
+                            MessageBox.Show($"Üdvözöljük, {username}");
+                            return;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hibás bejelentkezési adatok!");
+                            conn.Close(); 
+                            return;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message.ToString());
+                }
             }
             
 
