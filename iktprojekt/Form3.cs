@@ -19,7 +19,7 @@ namespace iktprojekt
 
         private void kilépésToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); // asd
         }
 
         private void button2_Click(object sender, EventArgs e)
