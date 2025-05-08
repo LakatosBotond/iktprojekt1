@@ -215,7 +215,18 @@ namespace iktprojekt
 
         private void újListaLétrehozásToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Clear();
+            DialogResult dialogResult = MessageBox.Show("Biztosan uj listát kezdesz? \naz el nem mentett adatok eltünnek", "Open existing file", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                listBox1.Items.Clear();
+                Console.WriteLine("Elfogadva, kiiratás");
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                Console.WriteLine("Elutasitva, Visszaküldés");
+                return;
+
+            }
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

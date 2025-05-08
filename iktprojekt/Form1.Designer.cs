@@ -35,7 +35,6 @@
             this.kilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menüToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.újListaLétrehozásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.háttérszinVálasztásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.betüszínVálasztásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -85,7 +84,6 @@
             // 
             this.menüToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.újListaLétrehozásToolStripMenuItem,
-            this.háttérszinVálasztásToolStripMenuItem,
             this.betüszínVálasztásToolStripMenuItem});
             this.menüToolStripMenuItem.Name = "menüToolStripMenuItem";
             this.menüToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
@@ -94,21 +92,14 @@
             // újListaLétrehozásToolStripMenuItem
             // 
             this.újListaLétrehozásToolStripMenuItem.Name = "újListaLétrehozásToolStripMenuItem";
-            this.újListaLétrehozásToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.újListaLétrehozásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.újListaLétrehozásToolStripMenuItem.Text = "Új lista létrehozás";
             this.újListaLétrehozásToolStripMenuItem.Click += new System.EventHandler(this.újListaLétrehozásToolStripMenuItem_Click);
-            // 
-            // háttérszinVálasztásToolStripMenuItem
-            // 
-            this.háttérszinVálasztásToolStripMenuItem.Name = "háttérszinVálasztásToolStripMenuItem";
-            this.háttérszinVálasztásToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.háttérszinVálasztásToolStripMenuItem.Text = "Háttérszin választás";
-            this.háttérszinVálasztásToolStripMenuItem.Click += new System.EventHandler(this.háttérszinVálasztásToolStripMenuItem_Click);
             // 
             // betüszínVálasztásToolStripMenuItem
             // 
             this.betüszínVálasztásToolStripMenuItem.Name = "betüszínVálasztásToolStripMenuItem";
-            this.betüszínVálasztásToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.betüszínVálasztásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.betüszínVálasztásToolStripMenuItem.Text = "Betüszín választás";
             this.betüszínVálasztásToolStripMenuItem.Click += new System.EventHandler(this.betüszínVálasztásToolStripMenuItem_Click);
             // 
@@ -323,7 +314,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menüToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem újListaLétrehozásToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem háttérszinVálasztásToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kilToolStripMenuItem;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ListBox listBox1;
