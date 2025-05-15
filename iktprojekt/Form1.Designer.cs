@@ -43,8 +43,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,6 +53,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.siticoneButton7 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticoneButton6 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,14 +92,14 @@
             // újListaLétrehozásToolStripMenuItem
             // 
             this.újListaLétrehozásToolStripMenuItem.Name = "újListaLétrehozásToolStripMenuItem";
-            this.újListaLétrehozásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.újListaLétrehozásToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.újListaLétrehozásToolStripMenuItem.Text = "Új lista létrehozás";
             this.újListaLétrehozásToolStripMenuItem.Click += new System.EventHandler(this.újListaLétrehozásToolStripMenuItem_Click);
             // 
             // betüszínVálasztásToolStripMenuItem
             // 
             this.betüszínVálasztásToolStripMenuItem.Name = "betüszínVálasztásToolStripMenuItem";
-            this.betüszínVálasztásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.betüszínVálasztásToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.betüszínVálasztásToolStripMenuItem.Text = "Betüszín választás";
             this.betüszínVálasztásToolStripMenuItem.Click += new System.EventHandler(this.betüszínVálasztásToolStripMenuItem_Click);
             // 
@@ -167,30 +167,6 @@
             this.button5.Text = "Teljes ürítés";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(332, 236);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(101, 36);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "Lista megnyitás";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(332, 177);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(101, 36);
-            this.button7.TabIndex = 13;
-            this.button7.Text = "Új lista";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // comboBox2
             // 
@@ -271,6 +247,40 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Határidő:";
             // 
+            // siticoneButton7
+            // 
+            this.siticoneButton7.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneButton7.BorderRadius = 20;
+            this.siticoneButton7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton7.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneButton7.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton7.Location = new System.Drawing.Point(332, 135);
+            this.siticoneButton7.Name = "siticoneButton7";
+            this.siticoneButton7.Size = new System.Drawing.Size(125, 45);
+            this.siticoneButton7.TabIndex = 22;
+            this.siticoneButton7.Text = "Új lista";
+            this.siticoneButton7.Click += new System.EventHandler(this.siticoneButton7_Click);
+            // 
+            // siticoneButton6
+            // 
+            this.siticoneButton6.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneButton6.BorderRadius = 20;
+            this.siticoneButton6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneButton6.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton6.Location = new System.Drawing.Point(332, 217);
+            this.siticoneButton6.Name = "siticoneButton6";
+            this.siticoneButton6.Size = new System.Drawing.Size(125, 45);
+            this.siticoneButton6.TabIndex = 23;
+            this.siticoneButton6.Text = "Lista megnyitása";
+            this.siticoneButton6.Click += new System.EventHandler(this.siticoneButton6_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +288,8 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BackgroundImage = global::iktprojekt.Properties.Resources.ChatGPT_Image_2025__ápr__10__09_21_01;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.siticoneButton6);
+            this.Controls.Add(this.siticoneButton7);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
@@ -287,10 +299,8 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button7);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label3);
@@ -322,8 +332,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label4;
@@ -335,6 +343,8 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton7;
+        private Siticone.Desktop.UI.WinForms.SiticoneButton siticoneButton6;
     }
 }
 
