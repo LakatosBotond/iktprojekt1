@@ -76,10 +76,49 @@ namespace iktprojekt
 
         }
 
-
-
-        private void siticoneButton7_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
+            openFileDialog1.Filter = "Szöveges fájlok (*.txt)|*.txt|Minden fájl (*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.Multiselect = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                foreach (string fileName in openFileDialog1.FileNames)
+                {
+                    string[] lines = System.IO.File.ReadAllLines(fileName);
+
+                    foreach (string line in lines)
+                    {
+                        listBox1.Items.Add(line);
+                    }
+                }
+            }
+
+
+            label1.Show();
+            label2.Show();
+            label3.Show();
+            label4.Show();
+            label5.Show();
+            button1.Show();
+            button2.Show();
+            button3.Show();
+            button4.Show();
+            button5.Show();
+            textBox1.Show();
+            comboBox1.Show();
+            comboBox2.Show();
+            dateTimePicker1.Show();
+;
+            button6.Hide();
+            button7.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
             listBox1.Items.Clear();
             label1.Show();
             label2.Show();
@@ -94,8 +133,8 @@ namespace iktprojekt
             comboBox1.Show();
             comboBox2.Show();
             dateTimePicker1.Show();
-            siticoneButton6.Hide();
-            siticoneButton7.Hide();
+            button6.Hide();
+            button7.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -292,46 +331,6 @@ namespace iktprojekt
         private void Form1_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void siticoneButton6_Click(object sender, EventArgs e)
-        {
-            listBox1.Items.Clear();
-            openFileDialog1.Filter = "Szöveges fájlok (*.txt)|*.txt|Minden fájl (*.*)|*.*";
-            openFileDialog1.FilterIndex = 1;
-            openFileDialog1.Multiselect = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                foreach (string fileName in openFileDialog1.FileNames)
-                {
-                    string[] lines = System.IO.File.ReadAllLines(fileName);
-
-                    foreach (string line in lines)
-                    {
-                        listBox1.Items.Add(line);
-                    }
-                }
-            }
-
-
-            label1.Show();
-            label2.Show();
-            label3.Show();
-            label4.Show();
-            label5.Show();
-            button1.Show();
-            button2.Show();
-            button3.Show();
-            button4.Show();
-            button5.Show();
-            textBox1.Show();
-            comboBox1.Show();
-            comboBox2.Show();
-            dateTimePicker1.Show();
-            ;
-            siticoneButton6.Hide();
-            siticoneButton7.Hide();
         }
     }
 
