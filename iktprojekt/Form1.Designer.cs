@@ -55,6 +55,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.betűtípusVálasztásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,7 +85,8 @@
             // 
             this.menüToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.újListaLétrehozásToolStripMenuItem,
-            this.betüszínVálasztásToolStripMenuItem});
+            this.betüszínVálasztásToolStripMenuItem,
+            this.betűtípusVálasztásToolStripMenuItem});
             this.menüToolStripMenuItem.Name = "menüToolStripMenuItem";
             this.menüToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menüToolStripMenuItem.Text = "Menü";
@@ -114,6 +116,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(621, 37);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 13);
@@ -124,9 +127,9 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(45, 386);
+            this.button2.Location = new System.Drawing.Point(45, 402);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 21);
+            this.button2.Size = new System.Drawing.Size(145, 36);
             this.button2.TabIndex = 8;
             this.button2.Text = "Jelenlegi lista mentése";
             this.button2.UseVisualStyleBackColor = false;
@@ -136,9 +139,9 @@
             // 
             this.button3.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(45, 359);
+            this.button3.Location = new System.Drawing.Point(45, 351);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 21);
+            this.button3.Size = new System.Drawing.Size(145, 35);
             this.button3.TabIndex = 9;
             this.button3.Text = "Lista megnyitása";
             this.button3.UseVisualStyleBackColor = false;
@@ -204,6 +207,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(426, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
@@ -213,6 +217,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(83, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
@@ -229,6 +234,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(83, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 13);
@@ -265,11 +271,19 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(88, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 15;
             this.label5.Text = "Határidő:";
+            // 
+            // betűtípusVálasztásToolStripMenuItem
+            // 
+            this.betűtípusVálasztásToolStripMenuItem.Name = "betűtípusVálasztásToolStripMenuItem";
+            this.betűtípusVálasztásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.betűtípusVálasztásToolStripMenuItem.Text = "betűtípus választás";
+            this.betűtípusVálasztásToolStripMenuItem.Click += new System.EventHandler(this.betűtípusVálasztásToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -335,6 +349,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ToolStripMenuItem betűtípusVálasztásToolStripMenuItem;
     }
 }
 

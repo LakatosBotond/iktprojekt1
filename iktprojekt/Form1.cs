@@ -332,6 +332,30 @@ namespace iktprojekt
         {
 
         }
+
+        private void betűtípusVálasztásToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (FontDialog fontDialog = new FontDialog())
+            {
+                if (fontDialog.ShowDialog() == DialogResult.OK)
+                {
+                    betutipusvalasztasglobalisan(this, fontDialog.Font);
+                }
+            }
+        }
+
+        private void betutipusvalasztasglobalisan(Control parent, Font font)
+        {
+            foreach (Control ctrl in parent.Controls)
+            {
+                ctrl.Font = font;
+
+                if (ctrl.HasChildren)
+                {
+                    betutipusvalasztasglobalisan(ctrl, font);
+                }
+            }
+        }
     }
 
 }
