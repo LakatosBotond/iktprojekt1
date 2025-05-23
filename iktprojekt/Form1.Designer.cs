@@ -36,6 +36,7 @@
             this.menüToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.újListaLétrehozásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.betüszínVálasztásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.betűtípusVálasztásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,7 +56,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.betűtípusVálasztásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.kijelentkezésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +69,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kilToolStripMenuItem,
+            this.kijelentkezésToolStripMenuItem,
             this.menüToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -84,9 +87,10 @@
             // menüToolStripMenuItem
             // 
             this.menüToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.újListaLétrehozásToolStripMenuItem,
             this.betüszínVálasztásToolStripMenuItem,
-            this.betűtípusVálasztásToolStripMenuItem});
+            this.betűtípusVálasztásToolStripMenuItem,
+            this.újListaLétrehozásToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.menüToolStripMenuItem.Name = "menüToolStripMenuItem";
             this.menüToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menüToolStripMenuItem.Text = "Menü";
@@ -104,6 +108,13 @@
             this.betüszínVálasztásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.betüszínVálasztásToolStripMenuItem.Text = "Betüszín választás";
             this.betüszínVálasztásToolStripMenuItem.Click += new System.EventHandler(this.betüszínVálasztásToolStripMenuItem_Click);
+            // 
+            // betűtípusVálasztásToolStripMenuItem
+            // 
+            this.betűtípusVálasztásToolStripMenuItem.Name = "betűtípusVálasztásToolStripMenuItem";
+            this.betűtípusVálasztásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.betűtípusVálasztásToolStripMenuItem.Text = "betűtípus választás";
+            this.betűtípusVálasztásToolStripMenuItem.Click += new System.EventHandler(this.betűtípusVálasztásToolStripMenuItem_Click);
             // 
             // listBox1
             // 
@@ -278,12 +289,19 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Határidő:";
             // 
-            // betűtípusVálasztásToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            this.betűtípusVálasztásToolStripMenuItem.Name = "betűtípusVálasztásToolStripMenuItem";
-            this.betűtípusVálasztásToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.betűtípusVálasztásToolStripMenuItem.Text = "betűtípus választás";
-            this.betűtípusVálasztásToolStripMenuItem.Click += new System.EventHandler(this.betűtípusVálasztásToolStripMenuItem_Click);
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Lista mentése";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // kijelentkezésToolStripMenuItem
+            // 
+            this.kijelentkezésToolStripMenuItem.Name = "kijelentkezésToolStripMenuItem";
+            this.kijelentkezésToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.kijelentkezésToolStripMenuItem.Text = "Kijelentkezés";
+            this.kijelentkezésToolStripMenuItem.Click += new System.EventHandler(this.kijelentkezésToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -350,6 +368,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem betűtípusVálasztásToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem kijelentkezésToolStripMenuItem;
     }
 }
 

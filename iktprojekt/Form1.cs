@@ -56,10 +56,19 @@ namespace iktprojekt
 
         private void kilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Form2 f2 = new Form2();
-            f2.Show();
-            
+
+
+            DialogResult dialogResult = MessageBox.Show("biztosan kilépsz?", "Open existing file", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Exit();
+
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+
+            }
         }
 
         private void háttérszinVálasztásToolStripMenuItem_Click(object sender, EventArgs e)
@@ -355,6 +364,46 @@ namespace iktprojekt
                     betutipusvalasztasglobalisan(ctrl, font);
                 }
             }
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            {
+                saveFileDialog1.Filter = "Szöveges fájl (*.txt)|*.txt|Minden fájl (*.*)|*.*";
+                saveFileDialog1.FilterIndex = 1;
+                saveFileDialog1.DefaultExt = "txt";
+
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    List<string> items = new List<string>();
+                    foreach (var item in listBox1.Items)
+                    {
+                        items.Add(item.ToString());
+                    }
+
+                    System.IO.File.WriteAllLines(saveFileDialog1.FileName, items);
+                }
+            }
+        }
+
+        private void kijelentkezésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dialogResult = MessageBox.Show("biztosan kijelentkezel?", "Open existing file", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+                Form2 f2 = new Form2();
+                f2.Show();
+
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+
+            }
+
+
         }
     }
 
